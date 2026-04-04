@@ -3,6 +3,8 @@ import { ScrollToTop } from "./components/ScrollToTop";
 
 import Index from "./pages/Index";
 import { GamePage } from "./pages/GamePage";
+import { SDKPage } from "./pages/SDKPage";
+import { SubmitGamePage } from "./pages/SubmitGamePage";
 import { NIP19Page } from "./pages/NIP19Page";
 import NotFound from "./pages/NotFound";
 
@@ -13,6 +15,8 @@ export function AppRouter() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/game/:gameId" element={<GamePage />} />
+        <Route path="/sdk" element={<SDKPage />} />
+        <Route path="/submit" element={<SubmitGamePage />} />
         {/* NIP-19 route for npub1, note1, naddr1, nevent1, nprofile1 */}
         <Route path="/:nip19" element={<NIP19Page />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
